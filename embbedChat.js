@@ -58,7 +58,6 @@ function start() {
     embbedScript.setAttribute('src', '/config/embbedChatController.js');
 }
 
-window.addEventListener('load', getData);
 window.addEventListener('load', start);
 
 
