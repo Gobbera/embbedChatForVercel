@@ -1,0 +1,120 @@
+
+:root {
+    --primary-color: #00a089;
+    --embbed-container-border-radius: 8px;
+}
+
+@keyframes slideOnOpenBox {
+    from {
+        transform: translateX(600px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOnCloseBox {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(600px);
+    }
+}
+
+.top-chat-bar {
+    height: 50px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-radius: var(--embbed-container-border-radius) var(--embbed-container-border-radius) 0 0;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    background-color: white;
+    position: fixed;
+    height: 470px;
+    bottom: 120px;
+    right: 38px;
+    align-self: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 -1px 12px 0 rgb(0 0 0 / 40%);
+    border-radius: var(--embbed-container-border-radius) var(--embbed-container-border-radius) 0 0;
+    margin: 0;
+    padding: 0;
+}
+
+#embbed-chat {
+    background-color: transparent;
+    border-radius: 0 0 var(--embbed-container-border-radius) var(--embbed-container-border-radius);
+    margin: 0;
+    padding: 0;
+}
+
+.openBox {
+    animation: slideOnOpenBox 1s;
+}
+
+.closeBox {
+    animation: slideOnCloseBox 1s;
+}
+
+#embbed-icons {
+    transform: scaleX(-1);
+    width: 60%; 
+    height: 60%; 
+    filter: invert(1);
+    margin: 0;
+    padding: 0;
+}
+
+.rounded-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.rounded-button:hover {
+    background-color: #37b9a5;
+}
+
+.rounded-button:active {
+    background-color: rgb(199, 199, 199);
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 25px;
+    right: 32px;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 500px) {
+    .box {
+        right: 0px;
+        bottom: 0px;
+        min-height: 100%;
+        border-radius: 0px;
+    }
+    .top-chat-bar {
+        border-radius: 0px;
+    }
+}
