@@ -1,3 +1,4 @@
+let id = document.currentScript.getAttribute('data-id');
 
 const embbedLink = document.getElementById('embbedLink');
 
