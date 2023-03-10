@@ -1,8 +1,3 @@
-const id = document.currentScript.getAttribute('data-id');
-const embbedApp = document.currentScript.getAttribute('data-embbedApp');
-
-console.log(id);
-console.log(embbedApp);
 
 const embbedLink = document.getElementById('embbedLink');
 
@@ -22,6 +17,7 @@ const closeChatButton = document.createElement('button');
 const closeButtonImg = document.createElement('img');
 
 function start() {
+
     document.head.appendChild(embbedStyle);
     embbedStyle.setAttribute('rel', 'stylesheet');
     embbedStyle.setAttribute('href', '/config/embbedChatStyle.css');
@@ -62,6 +58,7 @@ function start() {
     embbedScript.setAttribute('src', '/config/embbedChatController.js');
 }
 
+window.addEventListener('load', getData);
 window.addEventListener('load', start);
 
 
