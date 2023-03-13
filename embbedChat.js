@@ -10,6 +10,7 @@ const boxDiv = document.createElement('div');
 const iframe = document.createElement('iframe');
 
 const topBarDiv = document.createElement('div');
+const topBarDivImg = document.createElement('img');
 
 const openChatButton = document.createElement('button');
 const openChatButtonImg = document.createElement('img');
@@ -25,8 +26,8 @@ function start() {
 
     document.body.appendChild(openChatButton);
     openChatButton.setAttribute('id', 'chat-button');
-    openChatButtonImg.setAttribute('id', 'embbed-icons');
-    openChatButtonImg.setAttribute('src', '/embbed-icons/chat-icon.png');
+    openChatButtonImg.setAttribute('id', 'openChatImg');
+    openChatButtonImg.setAttribute('src', embbedLink.dataset.image || '/embbed-icons/chat-icon.png');
     openChatButtonImg.setAttribute('alt', 'chat-icon.png');
     openChatButton.appendChild(openChatButtonImg);
     openChatButton.setAttribute('class', 'rounded-button');
@@ -48,6 +49,9 @@ function start() {
     iframe.setAttribute('src', embbedLink.dataset.link);
     iframe.setAttribute('frameborder', '0');
 
+    topBarDiv.appendChild(topBarDivImg);
+    topBarDivImg.setAttribute('id', 'set-logo');
+    topBarDivImg.setAttribute('src', embbedLink.dataset.logo);
     topBarDiv.appendChild(closeChatButton);
 
     closeChatButton.setAttribute('id', 'close-button');
