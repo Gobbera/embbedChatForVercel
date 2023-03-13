@@ -26,10 +26,10 @@ function start() {
 
     document.body.appendChild(openChatButton);
     openChatButton.setAttribute('id', 'chat-button');
+    openChatButton.appendChild(openChatButtonImg);
     openChatButtonImg.setAttribute('id', 'openChatImg');
     openChatButtonImg.setAttribute('src', embbedLink.dataset.image || '/embbed-icons/chat-icon.png');
     openChatButtonImg.setAttribute('alt', 'chat-icon.png');
-    openChatButton.appendChild(openChatButtonImg);
     openChatButton.setAttribute('class', 'rounded-button');
     openChatButton.classList.add('chat-button');
 
