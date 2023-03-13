@@ -1,6 +1,6 @@
 let id = document.currentScript.getAttribute('data-id');
 
-const embbedLink = document.getElementById('embbedLink');
+const embbedLink = document.getElementById('embbedApp');
 
 const embbedStyle = document.createElement('link');
 const embbedScript = document.createElement('script');
@@ -35,6 +35,8 @@ function start() {
     document.body.appendChild(boxDiv);
     boxDiv.setAttribute('class', 'box');
     boxDiv.setAttribute('id', 'embbed-chat');
+    boxDiv.style.width = embbedLink.dataset.width;
+    boxDiv.style.height = embbedLink.dataset.height;
     boxDiv.appendChild(topBarDiv);
     boxDiv.appendChild(iframe);
     
